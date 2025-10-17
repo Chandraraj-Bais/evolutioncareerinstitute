@@ -725,7 +725,7 @@ body.menu-open {
 
 /* Close button */
 .close-btn {
-  background: none;
+  background: #003c71 ;
   border: 1px solid #aaa;
   font-size: 1.2rem;
   padding: 4px 12px;
