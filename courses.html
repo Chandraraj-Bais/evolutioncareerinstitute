@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+		
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Evolution Institute - Home</title>
+		<link rel="stylesheet" href="courses.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+	
+		<!-- AOS CSS -->
+		<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+	</head>
+<body>
+
+
+<!-- Scroll to Top Button ---------------------------------------------------------------------------------------------------------------------------->
+	<!-- Scroll to Top Button -->
+	<button id="scrollToTopBtn" title="Go to top">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+			<path d="M12 19V6M5 12l7-6 7 6" stroke-linecap="round" stroke-linejoin="round"/>
+		</svg>
+	</button>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const btn = document.getElementById("scrollToTopBtn");
+
+			window.addEventListener("scroll", function () {
+				btn.style.display = window.scrollY > 300 ? "flex" : "none";
+			});
+
+			btn.addEventListener("click", function () {
+				window.scrollTo({ top: 0, behavior: "smooth" });
+			});
+		});
+	</script>
+
+<!-- Scroll to Top Button ends ----------------------------------------------------------------------------------------------------------------------->
+
+
+<!-- Top Bar ----------------------------------------------------------------------------------------------------------------------------------------->
+	
+	<div class="top-bar">  <!--  data-aos="fade-up" --> 
+		
+		<!-- Left Section -->
+		<div class="top-left">
+			
+			<!-- Email block -->
+			<span class="email-wrap">
+				<!-- Desktop email text -->
+				<a href="mailto:evolutioncareerinstitute2024@gmail.com" class="email-link desktop-email">
+					<svg xmlns="http://www.w3.org/2000/svg" class="gmail-icon" viewBox="0 0 24 24" fill="white">
+						<path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 
+						2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 11 4 6.01V6h16zM4 18V8.23l8 
+						4.99 8-4.99V18H4z"/>
+					</svg>
+					evolutioncareerinstitute2024@gmail.com
+				</a>
+			</span>
+
+		</div>
+
+		<!-- Center Section -->
+		<div class="top-center">			
+			<a href="https://www.facebook.com/share/1BC3oGU62u/" class="icon facebook" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+			<a href="https://www.instagram.com/evolution_career_institute_seh?utm_source=qr&igsh=YXVoejFyNzJlMXNi" class="icon instagram"><i class="fab fa-instagram"></i></a>
+			<a href="https://wa.me/919685336065" target="_blank" class="icon whatsapp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+			<a href="https://youtube.com/@evolution-career-institute?si=gm3gyYrols0Om-wX" class="icon youtube"><i class="fab fa-youtube"></i></a>
+			<a href="Evolution-brochure.pdf" class="download-icon" target="_blank">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+					<path d="M12 16a1 1 0 0 1-.707-.293l-5-5a1 1 0 1 1 1.414-1.414L11 12.586V3a1 1 0 1 1 2 0v9.586l3.293-3.293a1 1 0 0 1 1.414 1.414l-5 5A1 1 0 0 1 12 16ZM4 20a1 1 0 1 1 0-2h16a1 1 0 1 1 0 2H4Z"/>
+				</svg>
+				<span class="tooltip-text">Evolution institute brochure</span>
+			</a>
+
+			<!-- Mobile/Tablet icon-only email -->
+			<a href="mailto:evolutioncareerinstitute2024@gmail.com" class="icon gmail-icon-link desktop-hidden">
+				<svg class="gmail-icon" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 48 48">
+					<path fill="#f1f1f1" d="M4 12a4 4 0 0 1 4-4h32a4 4 0 0 1 4 4v24a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/>
+					<path fill="#d93025" d="M44 12v2.3L24 26.5 4 14.3V12a4 4 0 0 1 4-4h32a4 4 0 0 1 4 4z"/>
+					<path fill="#a50e0e" d="M4 14.3l20 12.2 20-12.2v21.7a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/>
+				</svg>
+			</a>
+		</div>
+
+		<!-- Right Section -->
+		<div class="top-right">
+			<a href="tel:+919685336065" class="call-btn"><i class="fas fa-phone"></i> Call Us</a>
+		</div>
+	
+	</div>
+
+	<script>
+	  document.addEventListener("DOMContentLoaded", function () {
+		const downloadIcon = document.querySelector(".download-icon");
+		const tooltip = downloadIcon.querySelector(".tooltip-text");
+		const fileURL = downloadIcon.getAttribute("href");
+
+		// For mobile/touch and desktop click
+		downloadIcon.addEventListener("click", function (e) {
+		  // Stop instant download
+		  e.preventDefault();
+
+		  // Show tooltip text
+		  tooltip.classList.add("show");
+
+		  // After 1s → hide tooltip & auto-download file
+		  setTimeout(() => {
+			tooltip.classList.remove("show");
+
+			// Force file download
+			const tempLink = document.createElement("a");
+			tempLink.href = fileURL;
+			tempLink.setAttribute("download", "");
+			document.body.appendChild(tempLink);
+			tempLink.click();
+			document.body.removeChild(tempLink);
+		  }, 1000);
+		});
+	  });
+	</script>
+
+	<script>
+	const downloadLink = document.querySelector('.download-icon');
+
+	downloadLink.addEventListener('click', function(e) {
+	  if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+		// Mobile: open in new tab
+		e.preventDefault();
+		window.open(downloadLink.href, '_blank');
+	  }
+	  // Desktop: let the download attribute work normally
+	});
+	</script>
+
+
+<!-- Top Bar ends ------------------------------------------------------------------------------------------------------------------------------------>
+
+
+<!-- Header ------------------------------------------------------------------------------------------------------------------------------------------>
+	<header class="header-container">   <!-- data-aos="fade-up" data-aos-delay="100"  -->
+	
+		<div class="logo-nav-wrapper">
+		
+			<div class="logo">
+				
+				<img src="logo.jpg" alt="Evolution Logo" />			
+				<div class="logo-text">
+					<div class="evolution-word">
+						Evolution
+						<span class="trademark">®</span>
+					</div>
+					<div class="career-word">Career Institute Pvt. Ltd.</div>
+				</div>
+			
+			</div>
+
+			<!-- Hamburger Icon -->
+			<button class="hamburger" id="hamburgerBtn" aria-label="Toggle Menu">☰</button>
+
+			<!-- Desktop Nav -->
+			<nav class="desktop-nav">
+				<a href="index.html">Home</a>
+				<a href="features.html">Features</a>
+				<a href="courses.html">Courses</a>
+				<a href="about.html">About Us</a>
+				<a href="gallery.html">Gallery</a>
+			
+				<!-- Admissions Dropdown -->
+				<div class="dropdown">
+					<a href="#" class="dropbtn" id="admissionsDropdown">
+						<span class="dropbtn-text">Admissions</span>
+						<span class="arrow-down desktop-arrow"></span>
+					</a>
+					<div class="dropdown-content">
+						<a href="how-to-apply.html">How to apply</a>
+						<a href="scholarship.html">Scholarship</a>
+						<a href="faq.html">FAQ's</a>
+						<a href="t&c.html">Terms & Conditions</a>
+					</div>
+				</div>
+				
+				<a href="contact.html">Contact Us</a>
+			
+			</nav>
+		
+		</div>
+
+		<!-- Mobile Sidebar Nav -->
+		<div class="mobile-nav-overlay" id="mobileNav">
+			
+			<div class="mobile-header">
+
+				<!-- Top row: logo/title (left) and close button (right) -->
+				<div class="top-row">
+					<div class="left-logo-title">
+						<img src="logo.jpg" alt="Logo" />
+						<div class="mobile-title">
+							<div class="evolution-word">
+								Evolution <span class="trademarkk">®</span>
+							</div>
+							<div class="career-word">Career Institute Pvt. Ltd.</div>
+						</div>
+					</div>
+					<button class="close-btn" id="closeBtn">X</button>
+				</div>
+
+				<!-- Centered social icons below -->
+				<div class="center-icons">
+					<a href="https://www.facebook.com/share/1BC3oGU62u/" class="icon facebook"><i class="fab fa-facebook-f"></i></a>
+					<a href="https://www.instagram.com/evolution_career_institute_seh?utm_source=qr&igsh=YXVoejFyNzJlMXNi" class="icon instagram"><i class="fab fa-instagram"></i></a>
+					<a href="https://youtube.com/@evolution-career-institute?si=gm3gyYrols0Om-wX" class="icon youtube"><i class="fab fa-youtube"></i></a>
+					<a href="https://wa.me/919685336065" target="_blank" class="icon whatsapp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+				</div>
+
+			</div>
+
+			<nav class="mobile-nav">
+				
+				<a href="index.html">Home</a>
+				<a href="features.html">Features</a>
+				<a href="courses.html">Courses</a>
+				<a href="about.html">About Us</a>
+				<a href="gallery.html">Gallery</a>
+				
+				<!-------		Admissions		------->
+				<div class="mobile-dropdown">	
+					<button id="mobileDropdownToggle" class="mobile-dropbtn">
+						Admissions <span class="arrow-down rotate-arrow">▼</span>
+
+					</button>
+
+					<div id="mobileDropdownMenu" class="mobile-dropdown-content">
+						<a href="how-to-apply.html">How to apply</a>
+						<a href="scholarship.html">Scholarship</a>
+						<a href="faq.html">FAQ's</a>
+						<a href="t&c.html">Terms & Conditions</a>
+					</div>
+				</div>
+				<!-------		Admissions ends		------->
+				
+				<a href="contact.html">Contact Us</a>
+				
+				<a href="tel:+919685336065" class="apply-btn"><i class="fas fa-phone"></i> Call Us</a>
+				
+				<div class="contact-info">
+					<h2> Contact Info </h2>
+					<p>
+						In front of P.G College Bhopal Naka, Bhopal road, Sehore, Madhya Pradesh, 466001
+					</p>
+					<p class="phone-row">
+						📞 <a href="tel:9685336065&nbsp;" class="phone-link">96853 36065</a>, 
+						📞 <a href="tel:9131386065" class="phone-link">91313 86065</a>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+					</p>
+				</div>
+
+			</nav>
+
+		</div>
+	
+	</header>
+
+	<!-- JavaScript to toggle the hamburger menu -->
+	<script>
+	
+		// Grab elements
+		const hamburgerBtn = document.getElementById("hamburgerBtn");
+		const mobileNav = document.getElementById("mobileNav");
+		const closeBtn = document.getElementById("closeBtn");
+
+		// Track menu state
+		let isMenuOpen = false;
+
+		// Toggle mobile menu when hamburger is clicked
+		hamburgerBtn.addEventListener("click", () => 
+		{
+			isMenuOpen = !isMenuOpen;
+			mobileNav.classList.toggle("show", isMenuOpen);
+			document.body.classList.toggle("menu-open", isMenuOpen);
+		});
+
+		// Close mobile menu on close (X) button
+		closeBtn.addEventListener("click", () => 
+		{
+			isMenuOpen = false;
+			mobileNav.classList.remove("show");
+			document.body.classList.remove("menu-open");
+		});
+
+		// Close mobile menu when a link is clicked
+		const mobileLinks = document.querySelectorAll(".mobile-nav a");
+		mobileLinks.forEach(link => 
+		{
+			link.addEventListener("click", () => 
+			{
+				isMenuOpen = false;
+				mobileNav.classList.remove("show");
+				document.body.classList.remove("menu-open");
+			});
+		});
+
+		// Highlight current page in both navs
+		const currentPage = location.pathname.split("/").pop();
+
+		document.querySelectorAll(".desktop-nav a").forEach(link => 
+		{
+			if (link.getAttribute("href") === currentPage) 
+			{
+				link.classList.add("active");
+			}
+		});
+
+		document.querySelectorAll(".mobile-nav a").forEach(link => 
+		{
+			if (link.getAttribute("href") === currentPage) 
+			{
+				link.classList.add("active");
+			}
+		});
+	
+
+		// Mobile dropdown toggle  
+		document.addEventListener("DOMContentLoaded", () => 
+		{
+			// for Admissions
+			const mobileToggle = document.getElementById("mobileDropdownToggle");
+			const mobileMenu = document.getElementById("mobileDropdownMenu");
+			const arrowSpan = mobileToggle.querySelector(".arrow-down");
+
+			if (mobileMenu) 
+			{
+				mobileMenu.classList.remove("open");
+			}
+
+			if (mobileToggle && mobileMenu) 
+			{
+				mobileToggle.addEventListener("click", (e) => 
+				{
+					e.preventDefault();
+					e.stopImmediatePropagation();
+
+					// Toggle submenu
+					mobileMenu.classList.toggle("open");
+
+					// Toggle arrow direction
+					if (mobileMenu.classList.contains("open")) 
+					{
+						arrowSpan.textContent = "►"; // Right arrow
+					} 
+					else 
+					{
+						arrowSpan.textContent = "▼"; // Down arrow
+					}
+				});
+			}
+	
+			// for Courses
+			const coursesToggle = document.getElementById("coursesDropdownToggle");
+			const coursesMenu = document.getElementById("coursesDropdownMenu");
+			const coursesArrow = coursesToggle.querySelector(".arrow-down");
+
+			if (coursesMenu) 
+			{
+			  coursesMenu.classList.remove("open");
+			}
+
+			if (coursesToggle && coursesMenu) 
+			{
+				coursesToggle.addEventListener("click", (e) => 
+				{
+					e.preventDefault();
+					e.stopImmediatePropagation();
+
+					coursesMenu.classList.toggle("open");
+
+					if (coursesMenu.classList.contains("open")) 
+					{
+						coursesArrow.textContent = "►"; // Right arrow
+					} 
+					else
+					{
+						coursesArrow.textContent = "▼"; // Down arrow
+					}
+				});
+			}
+		});
+
+	</script>
+
+
+<!-- Header ends ------------------------------------------------------------------------------------------------------------------------------------->
+
+
+    <section class="courses-section" data-aos="fade-up">
+		
+		<div class="container" data-aos="fade-up">
+			
+			<h1 class="section-title" data-aos="fade-up">Medical Entrance Courses – Evolution Institute Sehore</h1>
+			<p class="section-subtitle" data-aos="fade-up">
+				Comprehensive programs designed for aspirants of NEET and PNST exams with expert faculty, structured study plans, mentorship, and rigorous assessments.
+			</p>
+
+			<!-- Courses Grid -->
+			<div class="course-grid" data-aos="fade-up">
+
+				<!-- XI Foundation -->
+				<div class="course-detail" data-aos="fade-up">
+					
+					<div class="course-header" >
+						<h2>XI Foundation</h2>
+						<span class="course-badge">2-Year Program</span>
+					</div>
+					
+					<p class="course-overview">
+						A two-year foundation program for students starting preparation early from Class XI. Focuses on building strong fundamentals in Physics, Chemistry, Biology, and English with school syllabus integration and competitive exam training.
+					</p>
+					
+					<ul class="course-info">
+						<li class="info-item"><i class="fa-solid fa-graduation-cap"></i> Eligibility: Class X Passed</li>
+						<li class="info-item"><i class="fa-solid fa-clock"></i> Duration: Two Years</li>
+						<li class="info-item"><i class="fa-solid fa-book-open"></i> Coverage: XI & XII + NEET & PNST Syllabus</li>
+					</ul>
+					
+					<div class="course-extra">
+						<p><strong>Faculty:</strong> Experienced teachers for Biology, Chemistry, and Physics with a focus on competitive exams.</p>
+						<p><strong>Mentorship:</strong> Personalized guidance, doubt-solving, and progress monitoring for consistent improvement.</p>
+						<p><strong>Assessment:</strong> Weekly quizzes, monthly test series, and full-length mock exams as per exam pattern.</p>
+						<p><strong>Student Focus:</strong> Concept clarity, analytical thinking, and exam-oriented preparation.</p>
+						<p><strong>Class Schedule:</strong> 5–6 hours/day, 6 days a week with guided self-study sessions.</p>
+					</div>
+					<a href="admission-enquiry.html" class="enroll-btn" data-aos="fade-up">Inquire Now</a>
+				
+				</div>
+
+				<!-- XII Foundation -->
+				<div class="course-detail" data-aos="fade-up">
+					
+					<div class="course-header">
+						<h2>XII Foundation</h2>
+						<span class="course-badge">1-Year Program</span>
+					</div>
+					
+					<p class="course-overview">
+						One-year intensive course for Class XII students targeting NEET & PNST exams with strong focus on conceptual clarity, board exam preparation, and structured revision cycles.
+					</p>
+					
+					<ul class="course-info">
+						<li class="info-item"><i class="fa-solid fa-graduation-cap"></i> Eligibility: Class XI Passed</li>
+						<li class="info-item"><i class="fa-solid fa-clock"></i> Duration: One Year</li>
+						<li class="info-item"><i class="fa-solid fa-book-open"></i> Coverage: XII + NEET & PNST Syllabus</li>
+					</ul>
+					
+					<div class="course-extra">
+						<p><strong>Faculty:</strong> Subject experts focusing on quick syllabus mastery and practical exam strategies.</p>
+						<p><strong>Mentorship:</strong> Regular feedback, doubt-clearing sessions, personalized study plans and special focused on boards exam.</p>
+						<p><strong>Assessment:</strong> Unit-wise tests, PNST/NEET mock exams, and board preparation support.</p>
+						<p><strong>Student Focus:</strong> Time management, structured revision, and exam temperament.</p>
+						<p><strong>Class Schedule:</strong> 6 hours of daily classes with integrated practice and self-study.</p>
+					</div>
+					<a href="admission-enquiry.html" class="enroll-btn" data-aos="fade-up">Register Now</a>
+				
+				</div>
+					
+				<!-- Dropper / Repeater Batch -->
+				<div class="course-detail" data-aos="fade-up">
+					
+					<div class="course-header">
+						<h2>Dropper Batch (Advanced)</h2>
+						<span class="course-badge">Rank Booster</span>
+					</div>
+					
+					<p class="course-overview">
+						A specialized program for repeaters aiming for high scores in NEET & PNST. Focused on strengthening weak areas, revising high-yield topics, and practicing through mock exams.
+					</p>
+					
+					<ul class="course-info">
+						<li class="info-item"><i class="fa-solid fa-graduation-cap"></i> Eligibility: XII Passed/Appeared</li>
+						<li class="info-item"><i class="fa-solid fa-clock"></i> Duration: 12 Months</li>
+						<li class="info-item"><i class="fa-solid fa-bolt"></i> Schedule: 6 days/week, 6 hours class + 4 hours self-study</li>
+					</ul>
+					
+					<div class="course-extra">
+						<p><strong>Faculty:</strong> Senior faculty with proven success in medical entrance coaching.</p>
+						<p><strong>Mentorship:</strong> Individual progress monitoring, personalized improvement plans, and exam counseling.</p>
+						<p><strong>Assessment:</strong> Regular practice sheets, OMR-based tests, and grand mock exams.</p>
+						<p><strong>Student Focus:</strong> Accuracy building, error correction, and competitive exam strategy.</p>
+						<p><strong>Class Schedule:</strong> 6+4 hour sessions designed for maximum output and top rank preparation.</p>
+					</div>
+					<a href="admission-enquiry.html" class="enroll-btn" data-aos="fade-up">Enroll Now</a>
+				
+				</div>
+
+				<!-- Target / Crash Course -->
+				<div class="course-detail" data-aos="fade-up">
+					
+					<div class="course-header">
+						<h2>Target Batch</h2>
+						<span class="course-badge">Crash Course</span>
+					</div>
+					
+					<p class="course-overview">
+						Short-term crash course designed for Class XII pass students to enhance performance in NEET & PNST exams through focused revision, mock tests, and strategy sessions.
+					</p>
+					
+					<ul class="course-info">
+						<li class="info-item"><i class="fa-solid fa-graduation-cap"></i> Eligibility: XII Passed</li>
+						<li class="info-item"><i class="fa-solid fa-clock"></i> Duration: 3–4 Months</li>
+						<li class="info-item"><i class="fa-solid fa-book-open"></i> Coverage: NEET & PNST Complete Syllabus</li>
+					</ul>
+					
+					<div class="course-extra">
+						<p><strong>Faculty:</strong> Trainers with expertise in handling crash courses and quick preparation strategies.</p>
+						<p><strong>Mentorship:</strong> One-on-one error analysis, improvement guidance, and motivation sessions.</p>
+						<p><strong>Assessment:</strong> Daily practice problems, weekly mock exams, and final revision tests.</p>
+						<p><strong>Student Focus:</strong> Score improvement, rapid revision, and confidence building.</p>
+						<p><strong>Class Schedule:</strong> 6–7 hours/day with dedicated self-study and practice sheets.</p>
+					</div>
+					<a href="admission-enquiry.html" class="enroll-btn" data-aos="fade-up">Join Now</a>
+				
+				</div>
+
+			</div>
+
+			<!-- Common Features -->
+			<div class="detailed-features" data-aos="fade-up">
+				
+				<h3><i class="fa-solid fa-list-check"></i> Standard Features Across All Batches</h3>
+				<div class="feature-item">
+					<div class="feature-label"><i class="fa-solid fa-language"></i> Medium</div>
+					<div class="feature-value">English & Hindi</div>
+				</div>
+				
+				<div class="feature-item">
+					<div class="feature-label"><i class="fa-solid fa-user-plus"></i> Admission</div>
+					<div class="feature-value admission-detail">Direct Admission through entrance test.</div>
+				</div>
+
+				<div class="feature-item">
+					<div class="feature-label"><i class="fa-solid fa-location-dot"></i> Location</div>
+					<div class="feature-value">Evolution Institute Sehore Campus</div>
+				</div>
+				
+				<div class="feature-item">
+					<div class="feature-label"><i class="fa-solid fa-notes-medical"></i> Study Material</div>
+					<div class="feature-value">Bilingual, detailed study material aligned with NEET & PNST syllabus.</div>
+				</div>
+				
+				<div class="feature-item">
+					<div class="feature-label"><i class="fa-solid fa-sack-dollar"></i> Scholarship</div>
+					<div class="feature-value scholarship-detail"><a href="scholarship.html">Click here for Scholarship details</a></div>
+				</div>
+			
+			</div>
+		
+		</div>
+	</section>
+
+    <div class="center-container" data-aos="fade-up">
+		<div class="restriction-banner" data-aos="fade-up">
+			
+			<div class="text-content" data-aos="fade-up">
+				
+				<h1 class="main-title" >Mobile-Free Learning Zone</h1>
+				<p class="description">
+					Evolution Career Institute, Sehore ensures a focused and distraction-free environment for all students. 
+					Mobile devices are strictly restricted within classrooms to maintain security and maximize learning outcomes. 
+					Kindly follow this rule for your benefit.
+				</p>
+			</div>
+			
+			<div class="icon-container" data-aos="fade-up">
+				<i class="fas fa-mobile-alt restriction-icon"></i>
+			</div>
+		
+		</div>
+	</div>
+
+
+<!-- Footer Section ---------------------------------------------------------------------------------------------------------------------------------->
+	<footer class="footer" data-aos="fade-up">
+		
+		<div class="footer-container" data-aos="fade-up">
+
+			<!-- Left: Logo + Name -->
+			<div class="footer-col footer-left" data-aos="fade-up">
+				<div class="footer-brand" data-aos="fade-up">
+					
+					<img src="logo-footer.png" alt="Institute Logo" class="footer-logo"/>
+					<h2>
+						<span class="brand-main">Evolution<span class="footer-trademark">&reg;</span></span></span>
+						<span class="brand-sub">Career Institute Pvt. Ltd.</span>
+					</h2>
+				
+				</div>
+				<p>
+					Evolution Institute is dedicated to providing quality education and fostering innovation.
+					Join us in shaping the future through knowledge and growth.
+				</p>
+			</div>
+
+			<!-- Admissions -->
+			<div class="footer-col" data-aos="fade-up">
+				<h3>Admissions</h3>
+					
+				<ul>
+					<li><a href="how-to-apply.html">How to Apply</a></li>
+					<li><a href="faq.html">FAQs</a></li>
+				</ul>
+				<br>
+			
+				<h3 data-aos="fade-up">Courses</h3>
+				
+				<ul data-aos="fade-up">
+					<li><a href="courses.html">NEET</a></li>
+					<li><a href="courses.html">CUET</a></li>
+					<li><a href="courses.html">PNST</a></li>
+					<li><a href="courses.html">Para-Medical</a></li>
+				</ul>
+			</div>
+	
+			<!-- Useful Links -->
+			<div class="footer-col" data-aos="fade-up">
+			
+				<h3 data-aos="fade-up">Useful Links</h3>
+				<ul data-aos="fade-up">
+					<li><a href="tel:+919685336065">Get Enquiry</a></li>
+					<li><a href="admission-enquiry.html">Join Now</a></li>
+					<li><a href="features.html">Why Evolution</a></li>
+					<li><a href="scholarship.html">Scholarship</a></li>
+					<li><a href="t&c.html">Terms & Conditions</a></li>
+					<li><a href="gallery.html">Gallery</a></li>
+				</ul>
+			
+			</div>
+
+			<!-- Address / Contact -->
+			<div class="footer-col footer-right" data-aos="fade-up">
+				
+				<h3>Address</h3>
+				<p>
+					<a href="https://www.google.com/maps?q=Evolution+career+institute+sehore+In+Front+of+P.G.+College+Bhopal+Naka,+Sehore,+Madhya+Pradesh+466001" target="_blank" style="color: inherit; text-decoration: none;">
+						Evolution career institute In Front of P.G. College Bhopal Naka
+						Sehore, Madhya Pradesh - 466001
+					</a>
+				</p>
+
+				<p>
+					<i class="fas fa-phone"></i>
+					<a href="tel:+919685336065" style="color: inherit; text-decoration: none;">
+						Admission Support: +91 96853 36065
+					</a>
+				</p>
+
+				<p>
+					<i class="fas fa-globe"></i>
+					<a href="https://evolutioncareerinstitute.in" target="_blank" style="color: inherit; text-decoration: none;">
+						info@evolutioncareerinstitute.in
+					</a>
+				</p>
+
+				<div class="footer-socials">
+					<a href="https://www.facebook.com/share/1BC3oGU62u/" target="_blank"><i class="fab fa-facebook"></i></a>
+					<a href="https://www.instagram.com/evolution_career_institute_seh?utm_source=qr&igsh=YXVoejFyNzJlMXNi" target="_blank"><i class="fab fa-instagram"></i></a>
+					<a href="https://youtube.com/@evolution-career-institute?si=gm3gyYrols0Om-wX" target="_blank"><i class="fab fa-youtube"></i></a>
+					<a href="https://wa.me/919685336065" target="_blank"><i class="fab fa-whatsapp"></i></a>
+					<a href="mailto:evolutioncareerinstitute2024@gmail.com"><i class="fas fa-envelope"></i></a>
+				</div>
+
+			</div>
+
+		</div>
+
+		<!-- Bottom -->
+		<div class="footer-bottom" data-aos="fade-up">
+			<p>&copy; 2025 Evolution Institute. All Rights Reserved.</p>
+			<p class="designed-by">  Designed and powered by 
+				<a href="mailto:chandrarajbais@gmail.com">Chandraraj Bais</a>
+			</p>
+		</div>
+
+	</footer>
+
+
+<!-- Footer Section ends ----------------------------------------------------------------------------------------------------------------------------->
+
+
+<!-- Animation Section js part  ---------------------------------------------------------------------------------------------------------------------->
+
+<!-- Initialize AOS -->
+ 
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+ <script>
+    AOS.init({
+      offset: 120, // trigger animation after scrolling this far (px)
+      duration: 600, // default animation duration
+      easing: 'ease-in-out', // easing function
+      once: true, // ensure animation triggers only once per element
+      mirror: false, // repeat animation on scroll up
+      //disable: 'mobile', // optional: disables animations on mobile if performance is of concern
+    });
+  </script>
+
+
+<!-- Animation Section js part ends ------------------------------------------------------------------------------------------------------------------>
+
+
+</body>
+</html>
+
+
+
+
