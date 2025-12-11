@@ -31,9 +31,7 @@ The repository follows a simple and organized layout:
 | `how-to-apply.html` | Step-by-step admission instructions |
 | `scholarship.html`  | Details about scholarships and eligibility |
 | `contact.html`      | Contact form and institute communication details |
-| `about.html`        | Institute background, mission, and vision |
-| `assets/`           | Images, icons, logos, and media content |
-| `styles/`           | Global and component-specific CSS files |
+| `about.html`        | Institute background, mission, and vision
 
 ---
 
