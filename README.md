@@ -5,9 +5,7 @@
   <img src="https://evolutioncareerinstitute.in/cr-img4.jpg" alt="Evolution Career Institute Banner" width="100%">
 </p>
 
-This repository contains the source code for the **Evolution Career Institute Sehore** website — a fast, clean, and responsive platform built for students preparing for **NEET**, **PNST**, **CUET**, and Para-Medical entrance examinations.
-
-The purpose of this website is to provide students and parents with clear information about courses, scholarships, faculty, admissions, and institute updates. The entire project is designed with performance, accessibility, and SEO best-practices in mind.
+The Evolution Career Institute Sehore website serves as a modern and informative platform that introduces students and parents to the institute’s academic environment, available courses, teaching methodology, and overall coaching approach. Created for informational and promotional purposes, it highlights the institute’s values, faculty expertise, achievements, and admission details in a clear and accessible manner, helping aspirants understand what makes Evolution a trusted choice for **NEET, PNST, and CUET** preparation.
 
 🔗 **Live Website:** https://evolutioncareerinstitute.in/
 
