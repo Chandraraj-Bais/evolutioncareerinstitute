@@ -48,5 +48,3 @@ Welcome to the **Evolution Career Institute Sehore** official website repository
 ---
 
 
-   ```bash
-   git clone https://github.com/yourusername/evolution-career-institute.git
