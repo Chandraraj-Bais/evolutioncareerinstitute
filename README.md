@@ -1,9 +1,9 @@
+
+# 🌟 Evolution Career Institute Sehore – Official Website
 <!-- Banner -->
 <p align="center">
   <img src="https://evolutioncareerinstitute.in/cr-img4.jpg" alt="Evolution Career Institute Banner" width="100%">
 </p>
-
-# 🌟 Evolution Career Institute Sehore – Official Website
 
 This repository contains the source code for the **Evolution Career Institute Sehore** website — a fast, clean, and responsive platform built for students preparing for **NEET**, **PNST**, **CUET**, and Para-Medical entrance examinations.
 
