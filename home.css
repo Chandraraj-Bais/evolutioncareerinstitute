@@ -1732,11 +1732,14 @@ body.menu-open {
   overflow: hidden;
   position: relative;
   z-index: 20;
-  transition: transform 0.3s ease;
+  transform: translateZ(0); /* Prevents jump/flicker */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .course-box:hover {
-  transform: scale(1.15);
+  transform: scale(1.05);   /* Smooth, stable hover */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.20);
+
 }
 
 .course-box:active { /* for mobile tap */
@@ -1779,6 +1782,9 @@ body.menu-open {
   font-size: 14px;
   font-weight: bold;
   transition: background 0.3s ease;
+  position: relative;
+  z-index: 50;
+  pointer-events: auto;
 }
 
 .view-btn:hover {
