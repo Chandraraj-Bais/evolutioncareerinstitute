@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   background-color: white;
   color: #333;
   scroll-behavior: smooth;
@@ -1157,162 +1157,658 @@ body.menu-open {
 /* Header ends ------------------------------------------------------------------------------------------------------------------------------------- */
 
 
-/* FAQ Container */
-.faq-container {
-  max-width: 1000px;
-  margin: 50px auto;
-  padding: 20px;
+/* Hero Section (image) ---------------------------------------------------------------------------------------------------------------------------- */
+ 
+.hero-section {
+  position: relative;
+  height: 250px;
+  background: url(bg-img-contact.jpg) center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed; /* This line makes it stay fixed */
 }
 
-.faq-heading {
-  font-size: 26px;
-  font-weight: bold;
-  text-align: left;
-  margin-bottom: 10px;
-  color: #154680;
-}
-
-.underline {
-  width: 80px;
-  height: 4px;
-  background-color: #fff5cc;
-  margin-bottom: 30px;
-}
-
-.accordion {
-  background-color: #154680;
-  color: #fff;
-  cursor: pointer;
-  padding: 15px 20px;
-  width: 100%;
-  border: none;
-  outline: none;
-  text-align: left;
-  font-size: 16px;
-  font-weight: bold;
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(25, 15, 97, 0.8); /* extracted color from your image */
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: background-color 0.3s ease;
-  border-radius: 4px;
-  margin-bottom: 5px;
-  flex-wrap: nowrap;
-  gap: 10px;
+  align-items: flex-end;
+  padding: 40px 60px;
+  box-sizing: border-box;
 }
 
-.accordion:hover {
-  background-color: #0d305a;
-}
-
-.accordion .question {
-  flex: 1;
-  text-align: justify;
-  min-width: 0;
-}
-
-.accordion .icon {
-  font-size: 20px;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 24px;
-  height: 24px;
-}
-
-.panel {
-  background-color: #f9f9f9;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease, padding 0.4s ease;
-  padding: 0 20px;
-  border-radius: 4px;
-  margin-bottom: 10px;
-}
-
-.panel.show {
-  max-height: 500px;
-  padding: 15px 20px;
-}
-
-.panel p {
+.hero-overlay h1 {
   margin: 0;
-  text-align: justify;
-  font-size: 15px;
-  color: #333;
+  font-size: 48px;
+  font-weight: 700;
+  color: white;
 }
 
-/* Fade-up animation */
-.fade-up {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+/* Responsive: Mobile Fix for Contact Us */
+@media (max-width: 576px) {
+  .hero-overlay {
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 20px 25px;
+    text-align: left;
+  }
+
+  .hero-overlay h1 {
+    font-size: 36px; /* Slightly larger than usual mobile size */
+    text-align: left;
+  }
 }
 
-.fade-up.revealed {
-  opacity: 1;
-  transform: translateY(0);
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    padding: 20px 15px;
 }
+
+/* Heading */
+.features-heading h2 {
+    font-size: 2.8rem;           /* Desktop size */
+    font-weight: bold;
+    color: #150079;            /* Deep blue */
+    margin-bottom: 8px;
+}
+
+/* Horizontal Line */
+.features-heading hr {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .features-heading h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
-  .faq-heading {
-    font-size: 22px;
-    text-align: center;
-  }
-
-  .underline {
-    width: 80px;
-    height: 4px;
-    background-color: #fff5cc;
-    margin-bottom: 30px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .accordion {
-    font-size: 15px;
-    padding: 15px;
-    flex-wrap: nowrap;
-  }
-
-  .accordion .icon {
-    align-self: center;
-    margin-top: 0;
-  }
-
-  .accordion .question {
-    font-size: 15px;
-    flex: 1;
-    min-width: 0;
-  }
+    .features-heading h2 {
+        font-size: 1.6rem;
+        text-align: left; /* stays aligned like screenshot */
+    }
 }
 
+/* Small Mobile */
 @media (max-width: 480px) {
-  .faq-container {
-    padding: 15px;
-  }
-
-  .underline {
-    width: 80px;
-    height: 4px;
-    background-color: #fff5cc;
-    margin-bottom: 30px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .accordion {
-    font-size: 14px;
-    padding: 12px 16px;
-  }
-
-  .accordion .question {
-    font-size: 14px;
-  }
-
-  .panel p {
-    font-size: 14px;
-  }
+    .features-heading h2 {
+        font-size: 1.4rem;
+    }
 }
+
+
+/* Hero Section (image) ends ----------------------------------------------------------------------------------------------------------------------- */
+
+
+/*-- NEET Selections Section ---------------------------------------------------------------------------------------------------------------------------*/
+
+/* MAIN SECTION                                                               */
+/* ========================================================================== */
+
+.selections-page {
+    width: 100%;
+    background: white;
+    padding: 55px 0 100px;
+}
+
+/* MAIN INTRODUCTION                                                          */
+.selections-intro {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto 60px;
+    text-align: left;
+}
+
+/* YELLOW BADGE                                                              */
+.selections-badge {
+    display: inline-block;
+    background: #fbc02d;
+    color: #003c71;
+    padding: 7px 20px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+}
+
+/* MAIN HEADING                                                               */
+.selections-intro h2 {
+    color: #150079;
+    font-size: 2.6rem;
+    font-weight: 800;
+    line-height: 1.25;
+    margin: 0 0 10px;
+}
+
+/* MAIN DESCRIPTION                                                           */
+.selections-intro p {
+    color: #666666;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    max-width: 700px;
+    margin: 0;
+}
+
+
+/* RED DECORATIVE LINE                                                        */
+.selections-intro::after {
+    content: "";
+    display: block;
+    width: 58px;
+    height: 4px;
+    background: #ed3748;
+    border-radius: 10px;
+    margin-top: 16px;
+}
+
+/* COMMON RESULT SECTION                                                      */
+.results-section {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto 95px;
+}
+
+/* RESULT HEADING                                                             */
+.results-heading {
+    margin-bottom: 32px;
+    text-align: left;
+}
+
+/* RESULT HEADING TITLE                                                       */
+.results-heading h3 {
+    color: #150079;
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.3;
+    margin: 0 0 8px;
+}
+
+/* RESULT HEADING DESCRIPTION                                                 */
+.results-heading p {
+    color: #666666;
+    font-size: 0.98rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* STUDENT GRID                                                               */
+.students-grid {
+    display: grid;
+    gap: 25px;
+}
+
+/* NEET 2026 GRID                                                             */
+.selections-grid-2026 {
+    grid-template-columns:
+        repeat(4, 1fr);
+}
+
+/* NEET 2025 GRID                                                             */
+.selections-grid-2025 {
+    grid-template-columns:
+        repeat(3, 1fr);
+    gap: 15px;
+}
+
+/* STUDENT PHOTO CARD                                                         */
+.selection-card {
+    width: 90%;
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid
+        rgba(0, 60, 113, 0.10);
+
+    box-shadow:
+        0 8px 24px
+        rgba(0, 60, 113, 0.11);
+
+    position: relative;
+    cursor: pointer;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+/* CARD HOVER                                                                 */
+.selection-card:hover {
+    transform:
+        translateY(-7px);
+
+    border-color:
+        rgba(237, 55, 72, 0.35);
+
+    box-shadow:
+        0 18px 38px
+        rgba(0, 60, 113, 0.20);
+
+    z-index: 2;
+}
+
+/* STUDENT IMAGE                                                              */
+.selection-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3.5 / 4;
+    object-fit: cover;
+    object-position: center;
+    transition:
+        transform 0.45s ease;
+}
+
+/* IMAGE HOVER                                                                */
+.selection-card:hover img {
+    transform:
+        scale(1.035);
+}
+
+/* CLASS 12th SECTION                                                         */
+
+/* ========================================================================== */
+/*                         CLASS 12th BOARD RESULTS                           */
+/* ========================================================================== */
+
+.class12-section {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto 50px;
+}
+
+
+/* ========================= CLASS 12th HEADING ============================== */
+/* Same left alignment as NEET UG 2025 */
+
+.class12-section .results-heading {
+    text-align: left;
+    margin-bottom: 32px;
+}
+
+
+/* ========================= RESULT CARD ==================================== */
+
+.class12-result-card {
+    width: 85%;                  /* Reduced card width */
+    max-width: 1100px;           /* Maximum card size */
+    margin: 0 auto;              /* Keep card centered */
+
+    background: #ffffff;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(0, 60, 113, 0.10);
+
+    box-shadow:
+        0 8px 25px rgba(0, 60, 113, 0.12);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+/* ========================= CARD HOVER ===================================== */
+
+.class12-result-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 18px 40px rgba(0, 60, 113, 0.22);
+}
+
+
+/* ========================= RESULT IMAGE =================================== */
+
+.class12-result-card img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    /*
+       Image keeps its original ratio.
+       It will completely fit inside the card
+       without cropping.
+    */
+    object-fit: contain;
+
+    object-position: center;
+
+    transition: transform 0.45s ease;
+}
+
+
+/* ========================= IMAGE HOVER ==================================== */
+
+.class12-result-card:hover img {
+    transform: scale(1.02);
+}
+
+
+/* STUDENT VIDEOS SECTION                                                     */
+.student-videos-section {
+    width: 92%;
+    max-width: 1400px;
+    margin: -20px auto 60px;
+}
+
+/* VIDEO GRID — 3 CARDS IN ONE ROW                                            */
+.student-videos-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 28px;
+}
+
+/* VIDEO CARD                                                                 */
+.student-video-card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid
+        rgba(0, 60, 113, 0.10);
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 60, 113, 0.12);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+/* VIDEO CARD HOVER                                                           */
+.student-video-card:hover {
+    transform:
+        translateY(-7px);
+
+    box-shadow:
+        0 18px 38px
+        rgba(0, 60, 113, 0.20);
+}
+
+/* VIDEO WRAPPER                                                              */
+.student-video-wrapper {
+    width: 100%;
+    background: #000000;
+    overflow: hidden;
+}
+
+/* VIDEO                                                                      */
+.selection-video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background: #000000;
+}
+
+/* TABLET — 1100px                                                           */
+@media (max-width: 1100px) {
+    .selections-intro h2 {
+        font-size: 2.3rem;
+    }
+
+    /* 2026 */
+    .selections-grid-2026 {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    /* 2025 */
+    .selections-grid-2025 {
+        grid-template-columns:
+            repeat(3, 1fr);
+        gap: 22px;
+    }
+
+
+    /* Videos */
+    .student-videos-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+        gap: 22px;
+    }
+}
+
+/* SMALL TABLET — 850px                                                       */
+/* ========================================================================== */
+
+@media (max-width: 850px) {
+
+    .selections-page {
+        padding-top: 40px;
+    }
+
+    .selections-intro {
+        margin-bottom: 50px;
+    }
+
+    .selections-intro h2 {
+        font-size: 2.1rem;
+    }
+
+    .results-section {
+        margin-bottom: 75px;
+    }
+
+    /* 2026 */
+    .selections-grid-2026 {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 20px;
+    }
+
+    /* 2025 */
+    .selections-grid-2025 {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 20px;
+    }
+
+    .results-heading h3 {
+        font-size: 1.8rem;
+    }
+
+    /* Videos */
+    .student-videos-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .class12-result-card {
+        width: 95%;
+    }
+    .class12-section {
+        margin-bottom: 75px;
+    }
+}
+
+/* MOBILE — 576px                                                            */
+/* ========================================================================== */
+@media (max-width: 576px) {
+
+    .selections-page {
+        padding:
+            35px 0 65px;
+    }
+
+    .selections-intro {
+        width: 90%;
+        margin-bottom: 45px;
+    }
+
+    .selections-badge {
+        font-size: 0.72rem;
+        padding: 6px 15px;
+        margin-bottom: 10px;
+    }
+
+    .selections-intro h2 {
+        font-size: 1.7rem;
+        line-height: 1.35;
+    }
+
+    .selections-intro p {
+        font-size: 0.90rem;
+        line-height: 1.6;
+    }
+
+    .selections-intro::after {
+        width: 45px;
+        height: 3px;
+        margin-top: 13px;
+    }
+
+    /* Common */
+    .results-section,
+    .student-videos-section {
+        width: 90%;
+    }
+
+    .results-section {
+        margin-bottom: 60px;
+    }
+
+    .results-heading {
+        margin-bottom: 25px;
+    }
+
+    .results-heading h3 {
+        font-size: 1.55rem;
+    }
+
+    .results-heading p {
+        font-size: 0.88rem;
+    }
+
+    /* 2026 — TWO PER ROW */
+    /* ---------------------------------------------------------- */
+    .selections-grid-2026 {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 13px;
+    }
+
+    /* 2025 — TWO PER ROW ON MOBILE */
+    /* ---------------------------------------------------------- */
+    .selections-grid-2025 {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 13px;
+    }
+
+    .selection-card {
+        border-radius: 11px;
+    }
+
+    /* Disable strong hover scaling on touch */
+    .selection-card:hover {
+        transform:
+            translateY(-3px);
+    }
+
+    .selection-card:hover img {
+        transform:
+            scale(1.015);
+    }
+
+    /* CLASS 12th */
+    /* ---------------------------------------------------------- */
+      .class12-section {
+        width: 90%;
+        margin-bottom: 65px;
+    }
+
+    .class12-section .results-heading {
+        text-align: left;
+        margin-bottom: 25px;
+    }
+
+    .class12-result-card {
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    .class12-result-card img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        transform: none;
+    }
+
+    .class12-result-card:hover {
+        transform: translateY(-3px);
+    }
+
+    .class12-result-card:hover img {
+        transform: scale(1.01);
+    }
+
+    /* VIDEOS */
+    /* ---------------------------------------------------------- */
+    .student-videos-grid {
+        grid-template-columns:
+            1fr;
+        gap: 20px;
+    }
+
+    .student-video-card {
+        border-radius: 12px;
+    }
+}
+
+/* VERY SMALL MOBILE — 390px                                                 */
+/* ========================================================================== */
+
+@media (max-width: 390px) {
+
+    .selections-intro h2 {
+        font-size: 1.5rem;
+    }
+
+    .selections-intro p {
+        font-size: 0.85rem;
+    }
+
+    .selections-grid-2026,
+    .selections-grid-2025 {
+        gap: 10px;
+    }
+
+    .selection-card {
+        border-radius: 9px;
+    }
+
+    .results-heading h3 {
+        font-size: 1.4rem;
+    }
+
+    .student-videos-grid {
+        gap: 15px;
+    }
+}
+
+
+/*-- NEET Selections Section ---------------------------------------------------------------------------------------------------------------------------*/
 
 
 /* Footer Section ---------------------------------------------------------------------------------------------------------------------------------- */
@@ -1526,6 +2022,10 @@ body.menu-open {
 /* Footer Section ends ----------------------------------------------------------------------------------------------------------------------------- */
 
 
+/* Animation Section ----------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* Ensure animated elements start hidden for better effect */
 [data-aos] {
   opacity: 0;
   transition-property: opacity, transform;
@@ -1549,3 +2049,6 @@ body.menu-open {
   opacity: 1;
   transform: translate(0, 0) scale(1) rotateX(0);
 }
+
+
+/* Animation Section ends ----------------------------------------------------------------------------------------------------------------------------- */
