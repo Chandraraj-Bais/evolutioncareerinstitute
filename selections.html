@@ -706,7 +706,7 @@
 
     <!--                         STUDENT VIDEOS                                  -->
     <!-- ====================================================================== -->
-    <div class="student-videos-section">
+    <div class="student-videos-section" id="studentStories">
 
         <div
             class="results-heading"
@@ -727,6 +727,7 @@
                 <div class="student-video-wrapper">
 
                     <video
+						id="video1"
                         class="selection-video"
                         controls
                         playsinline
@@ -751,6 +752,7 @@
 
                 <div class="student-video-wrapper">
                     <video
+                        id="video2"
                         class="selection-video"
                         controls
                         playsinline
@@ -775,6 +777,7 @@
                 <div class="student-video-wrapper">
 
                     <video
+                        id="video3"
                         class="selection-video"
                         controls
                         playsinline
@@ -792,6 +795,8 @@
 
         </div>
     </div>
+
+
 
     <!--                    CLASS 12th BOARD RESULTS                            -->
     <!-- ====================================================================== -->
@@ -815,6 +820,208 @@
     </div>
 
 </section>
+
+
+
+<script>
+
+/*                         STUDENT VIDEO SYSTEM                               */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+    /* GET SECTION                                                            */
+    const storiesSection =
+        document.getElementById("studentStories");
+
+
+    /* GET VIDEOS                                                             */
+    const video1 =
+        document.getElementById("video1");
+
+    const video2 =
+        document.getElementById("video2");
+
+const video3 =
+        document.getElementById("video3");
+
+    const videos = [
+        video1,
+        video2,
+        video3
+    ];
+
+
+    /* SAFETY CHECK                                                           */
+    if (
+        !storiesSection ||
+        !video1 ||
+        !video2 ||
+        !video3
+    ) {
+
+        console.log(
+            "Student Stories videos not found."
+        );
+
+        return;
+
+    }
+
+    /* FEATURE 1                                                              */
+    /* MANUALLY PLAY ONE VIDEO                                                */
+    /*       ↓                                                                */
+    /* OTHER VIDEO AUTOMATICALLY PAUSES                                      */
+
+    videos.forEach(function (currentVideo) {
+
+        currentVideo.addEventListener(
+            "play",
+            function () {
+
+                videos.forEach(
+                    function (otherVideo) {
+
+                        if (
+                            otherVideo !== currentVideo
+                        ) {
+
+                            otherVideo.pause();
+
+                        }
+
+                    }
+                );
+
+
+            }
+        );
+
+
+    });
+
+    /* AUTOPLAY CONTROL                                                       */
+    let sectionVisible = false;
+
+	/* INTERSECTION OBSERVER                                                  */
+    const observer =
+        new IntersectionObserver(
+
+            function (entries) {
+
+                entries.forEach(
+                    function (entry) {
+
+                        /* SECTION ENTERED VIEWPORT                          */
+                        if (
+                            entry.isIntersecting
+                        ) {
+
+                            /* Prevent multiple autoplay calls while section remains visible. */
+                            if (
+                                !sectionVisible
+                            ) {
+
+                                sectionVisible =
+                                    true;
+
+									/* Stop Video 2                              */
+                                video2.pause();
+								video3.pause();
+
+                                /* Video 1 autoplay                          */
+
+								/* Muted autoplay is necessary for browser autoplay policies. */
+
+                                video1.muted = false;
+
+                                /*
+                                   Start from current position.
+                                   If you want it to restart from
+                                   beginning every time, use:
+
+                                   video1.currentTime = 0;
+                                */
+
+                                const playPromise =
+                                    video1.play();
+
+                                if (
+                                    playPromise
+                                    !== undefined
+                                ) {
+
+
+                                    playPromise
+                                        .then(
+                                            function () {
+
+                                                console.log(
+                                                    "Video 1 autoplay started."
+                                                );
+
+                                            }
+                                        )
+                                        .catch(
+                                            function (error) {
+
+                                                console.log(
+                                                    "Browser blocked autoplay:",
+                                                    error
+                                                );
+
+                                            }
+                                        );
+                                }
+
+                            }
+
+                        }
+                        /* SECTION LEFT VIEWPORT                             */
+                        else {
+
+
+                            sectionVisible =
+                                false;
+
+							/* Pause BOTH videos. */
+                            videos.forEach(
+                                function (video) {
+
+                                    video.pause();
+
+                                }
+                            );
+                        }
+
+                    }
+                );
+
+            },
+
+            {
+                /*
+                   As soon as a small portion of the
+                   section enters the screen, trigger it.
+
+                   This is intentionally low so that
+                   autoplay doesn't wait for the whole
+                   section to become visible.
+                */
+
+                threshold: 0.05
+
+            }
+
+        );
+    observer.observe(
+        storiesSection
+    );
+
+});
+
+</script>
+
 
 
 <!-- NEET Selections Section Ends ------------------------------------------------------------------------------------------------------>
