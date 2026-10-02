@@ -1690,7 +1690,7 @@ body.menu-open {
 
 /* Background Section */
 .courses-bg {
-  background: url('bg-img.jpg') no-repeat center top;
+  background: url('../assets/Home-Page-images/bg-img.jpg') no-repeat center top;
   background-size: cover;
   background-attachment: fixed;
   padding-top: 275px;
