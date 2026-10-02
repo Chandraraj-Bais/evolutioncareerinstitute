@@ -1163,7 +1163,7 @@ body.menu-open {
 .hero-section {
   position: relative;
   height: 235px;
-  background: url(../assets/Home-Page-images/bg-img-contact.jpg) center center no-repeat;
+  background: url(https://cdn.jsdelivr.net/gh/Chandraraj-Bais/evolutioncareerinstitute@69f8e9e/evolutioncareerinstitute/assets/Home-Page-images/bg-img-contact.jpg) center center no-repeat;
   background-size: cover;
   background-attachment: fixed; /* This line makes it stay fixed */
 }
